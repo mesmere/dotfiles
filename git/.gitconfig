@@ -2,6 +2,12 @@
 	name = Rileyann
 	email = 95945959+mesmere@users.noreply.github.com
 	signingkey = /home/rileyann/.ssh/id_ed25519.pub
+[init]
+        defaultBranch = main
+[pull]
+        rebase = true
+[rebase]
+        autoStash = true
 [diff]
 	tool = nvimdiff
 	guitool = meld
@@ -21,8 +27,6 @@
 	format = ssh
 [commit]
 	gpgsign = true
-[init]
-	defaultBranch = main
 [tag]
 	gpgsign = true
 [gpg "ssh"]
@@ -30,3 +34,5 @@
 [alias]
 	gdiff = "difftool -dg"
 	gmerge = "mergetool -g"
+	review = "!sh -c 'pr=$0 && base=${1:-main} && if [ \"$0\" = \"sh\" -o \"$2\" != \"\" ]; then echo \"Usage: git review pr-number [base-branch]\"; false; fi && git fetch origin \"$base\" && git fetch origin \"refs/pull/$pr/head\" && mergebase=$(git merge-base \"origin/$base\" FETCH_HEAD) && git checkout -f $mergebase && if [ \"$mergebase\" = \"$(git show-ref -s \"refs/heads/$base\")\" ]; then echo \"This PR already incorporates the latest changes from $base. HEAD is moving to $base.\"; git symbolic-ref HEAD \"refs/heads/$base\"; fi && git merge --squash FETCH_HEAD'"
+	review-merge = "!sh -c 'pr=$0 && base=${1:-main} && if [ \"$0\" = \"sh\" -o \"$2\" != \"\" ]; then echo \"Usage: git review-merge pr-number [base-branch]\"; false; fi && git fetch origin \"$base\" && git fetch origin \"refs/pull/$pr/head\" && mergebase=$(git merge-base \"origin/$base\" FETCH_HEAD) && git checkout -f $mergebase && if [ \"$mergebase\" = \"$(git show-ref -s \"refs/heads/$base\")\" ]; then echo \"This PR already incorporates the latest changes from $base. HEAD is moving to $base.\"; git symbolic-ref HEAD \"refs/heads/$base\"; fi && git merge --no-commit --no-ff FETCH_HEAD'"
