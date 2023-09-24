@@ -2,6 +2,21 @@
 	name = Rileyann
 	email = 95945959+mesmere@users.noreply.github.com
 	signingkey = /home/rileyann/.ssh/id_ed25519.pub
+[diff]
+	tool = nvimdiff
+	guitool = meld
+[difftool]
+	prompt = false
+	guiDefault = false
+[merge]
+	tool = nvimdiff3
+	guitool = meld
+[mergetool]
+	prompt = false
+	guiDefault = false
+[mergetool "meld"]
+	hasOutput = true
+	useAutoMerge = true
 [gpg]
 	format = ssh
 [commit]
@@ -12,3 +27,6 @@
 	gpgsign = true
 [gpg "ssh"]
 	allowedSignersFile = /home/rileyann/.config/git/allowed_signers
+[alias]
+	gdiff = "difftool -dg"
+	gmerge = "mergetool -g"
