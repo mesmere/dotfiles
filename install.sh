@@ -31,8 +31,12 @@ pacman --noconfirm -Sy \
   rare \
   nvm
 
-echo 'Setting up ssh-agent...'
+echo 'Setting up ssh...'
 systemctl --user --now enabled ssh-agent
+ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519 -C 95945959+mesmere@users.noreply.github.com
+ssh-add $HOME/.ssh/id_ed25519
+mkdir -p $HOME/.config/git
+sed -E 's/(.+?) (.+?) (.+?)/\3 \1 \2/' $HOME/.ssh/id_ed25519.pub > $HOME/.config/git/allowed_signers
 
 echo 'Stowing configs...'
 echo 'If this fails, you can run ./stow.sh manually as many times as you need to fix the problem.'
