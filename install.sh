@@ -29,8 +29,20 @@ echo 'Include = /etc/pacman.d/chaotic-mirrorlist' >> /etc/pacman.conf
 
 echo 'Installing AUR packages...'
 pacman --noconfirm -Sy \
-  rare \
-  nvm
+  rare
+
+echo 'Installing nodenv...'
+cwd=$(pwd)
+nodenvdir=$HOME/.nodenv
+git clone https://github.com/nodenv/nodenv.git $nodenvdir
+cd $nodenvdir
+src/configure
+make -C src
+mkdir plugins
+git clone https://github.com/nodenv/node-build.git plugins/node-build
+git clone https://github.com/nodenv/nodenv-update.git plugins/nodenv-update
+git clone https://github.com/nodenv/nodenv-aliases.git plugins/nodenv-aliases
+cd $cwd
 
 echo 'Setting up ssh...'
 systemctl --user --now enabled ssh-agent
