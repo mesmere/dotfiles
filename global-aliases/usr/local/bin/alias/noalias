@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+  echo 'Usage: noalias COMMAND [ARGUMENTS]'
+  exit 1
+fi
+
+PATH=$(echo $PATH | sed -E 's_/usr/local/bin/alias/?:__') "$@"
