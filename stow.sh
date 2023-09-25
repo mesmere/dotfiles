@@ -32,6 +32,9 @@ stow bash || exit 1
 stomp ../.config/sway
 stow sway || exit 1
 
+rm ../.config/nvim/init.lua # prefer vimscript...
+stow neovim || exit 1
+
 stow waybar || exit 1
 stow ssh || exit 1
 stow git || exit 1
