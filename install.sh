@@ -17,7 +17,8 @@ pacman --needed --noconfirm -S \
   most bat eza \
   jq jc gron \
   fd ripgrep \
-  neovim meld
+  neovim meld \
+  docker docker-compose
 
 echo 'Installing Chaotic AUR...'
 pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
