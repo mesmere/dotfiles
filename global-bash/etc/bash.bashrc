@@ -34,7 +34,7 @@ export SYSTEMD_PAGER='most -w'
 
 # Set prompt
 if [[ ${EUID} == 0 ]] ; then
-    PS1='\[\033[01;35m\]\w \$\[\033[00m\] '
+    PS1='\[\033[01;31m\]\w \$\[\033[00m\] '
 else
     PS1='\[\033[01;34m\]\w \$\[\033[00m\] '
 fi
