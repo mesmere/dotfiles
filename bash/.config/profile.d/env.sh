@@ -4,3 +4,4 @@
 export EDITOR=nvim
 export SHELL=/usr/bin/bash
 export TERMINAL_COMMAND=/usr/share/sway/scripts/foot.sh
+export BAT_PAGER=
