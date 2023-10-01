@@ -63,6 +63,7 @@ echo -e '\n*************************************************'
 echo 'Doom Emacs was installed but you need to run these to fix broken powerline icons. (The AUR artifacts are too old to be cached by chaotic.)'
 echo '  M-x nerd-icons-install-fonts'
 echo '  M-x all-the-icons-install-fonts'
+echo 'Additionally, the javascript module requires node/npm so make sure you use nodenv install and nodenv global to set up a global node install.'
 echo -e '*************************************************\n'
 
 echo 'Stowing configs...'
@@ -70,3 +71,4 @@ echo 'If this fails, you can run ./stow.sh manually as many times as you need to
 source ./stow.sh
 
 echo 'Done.'
+echo 'Do a full restart now before launching anything.'
