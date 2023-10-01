@@ -77,3 +77,8 @@
 
 (setq kill-whole-line t)
 (setq which-key-idle-delay 0.15)
+
+(when (featurep! :ui workspaces)
+  (setq +workspaces-switch-project-function (lambda (_) (treemacs)))
+)
+(setq projectile-current-project-on-switch 'keep)
