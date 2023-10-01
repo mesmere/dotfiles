@@ -75,5 +75,5 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(add-hook 'window-setup-hook #'doom/quickload-session)
 (setq kill-whole-line t)
+(setq which-key-idle-delay 0.15)
