@@ -35,9 +35,13 @@ stow sway || exit 1
 rm ../.config/nvim/init.lua # prefer vimscript...
 stow neovim || exit 1
 
+stow doom || exit 1
+
+stow foot || exit 1
 stow waybar || exit 1
 stow ssh || exit 1
 stow git || exit 1
+stow npm || exit 1
 
 echo '[[ $- != *i* ]] && return' | sudo tee /root/.bashrc > /dev/null
 
