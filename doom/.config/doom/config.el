@@ -77,6 +77,7 @@
 
 (setq kill-whole-line t)
 (setq which-key-idle-delay 0.15)
+(setq confirm-kill-emacs nil)
 
 (when (featurep! :ui workspaces)
   (setq +workspaces-switch-project-function (lambda (_) (treemacs)))
