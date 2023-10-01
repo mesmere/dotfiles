@@ -70,8 +70,9 @@ echo 'Stowing configs...'
 echo 'If this fails, you can run ./stow.sh manually as many times as you need to fix the problem.'
 source ./stow.sh
 
-echo 'Doom sync now that configs have been stowed...'
-$HOME/.config/emacs/bin/doom sync
+echo 'Doom install/sync now that configs have been stowed...'
+$HOME/.config/emacs/bin/doom install
+$HOME/.config/emacs/bin/doom sync # maybe not necessary
 
 echo 'Done.'
 echo 'Do a full restart now before launching anything.'
