@@ -42,6 +42,10 @@ mkdir plugins
 git clone https://github.com/nodenv/node-build.git plugins/node-build
 git clone https://github.com/nodenv/nodenv-update.git plugins/nodenv-update
 git clone https://github.com/nodenv/nodenv-aliases.git plugins/nodenv-aliases
+git clone https://github.com/nodenv/nodenv-default-packages.git plugins/nodenv-default-packages
+cat <<- EOF >> default-packages
+	nodemon
+EOF
 cd $cwd
 
 echo 'Setting up ssh...'
