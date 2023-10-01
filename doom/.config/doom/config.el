@@ -76,3 +76,4 @@
 ;; they are implemented.
 
 (add-hook 'window-setup-hook #'doom/quickload-session)
+(setq kill-whole-line t)
