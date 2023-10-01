@@ -43,7 +43,7 @@ git clone https://github.com/nodenv/node-build.git plugins/node-build
 git clone https://github.com/nodenv/nodenv-update.git plugins/nodenv-update
 git clone https://github.com/nodenv/nodenv-aliases.git plugins/nodenv-aliases
 git clone https://github.com/nodenv/nodenv-default-packages.git plugins/nodenv-default-packages
-cat <<- EOF >> default-packages
+cat <<- EOF > default-packages
 	nodemon
 EOF
 cd $cwd
@@ -54,6 +54,16 @@ ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519 -C 95945959+mesmere@users.noreply
 ssh-add $HOME/.ssh/id_ed25519
 mkdir -p $HOME/.config/git
 sed -E 's/(.+?) (.+?) (.+?)/\3 \1 \2/' $HOME/.ssh/id_ed25519.pub > $HOME/.config/git/allowed_signers
+
+echo 'Installing Doom Emacs...'
+pacman --noconfirm -S emacs-wayland editorconfig-core-c
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+$HOME/.config/emacs/bin/doom install
+echo -e '\n*************************************************'
+echo 'Doom Emacs was installed but you need to run these to fix broken powerline icons. (The AUR artifacts are too old to be cached by chaotic.)'
+echo '  M-x nerd-icons-install-fonts'
+echo '  M-x all-the-icons-install-fonts'
+echo -e '*************************************************\n'
 
 echo 'Stowing configs...'
 echo 'If this fails, you can run ./stow.sh manually as many times as you need to fix the problem.'
