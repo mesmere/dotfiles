@@ -83,3 +83,8 @@
   (setq +workspaces-switch-project-function (lambda (_) (treemacs)))
 )
 (setq projectile-current-project-on-switch 'keep)
+
+(when (featurep! :completion vertico)
+  ;; By default vertico sorts by string length first which is fast but useless
+  (setq vertico-sort-function #'vertico-sort-history-alpha)
+)
