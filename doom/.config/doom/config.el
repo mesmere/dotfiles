@@ -88,3 +88,7 @@
   ;; By default vertico sorts by string length first which is fast but useless
   (setq vertico-sort-function #'vertico-sort-history-alpha)
 )
+
+;; Set ruler at 100 characters
+(add-hook 'prog-mode-hook #'display-fill-column-indicator-mode)
+(setq-default display-fill-column-indicator-column 99)
