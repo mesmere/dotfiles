@@ -1,0 +1,8 @@
+include /usr/share/nano-syntax-highlighting/*.nanorc
+set titlecolor yellow,cyan
+set statuscolor yellow,cyan
+set keycolor yellow,normal
+set functioncolor yellow,normal
+set errorcolor yellow,red
+
+set autoindent
