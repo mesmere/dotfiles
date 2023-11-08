@@ -15,7 +15,7 @@ pacman --needed --noconfirm -S \
   bash-completion \
   stow \
   most bat eza \
-  jq jc gron \
+  fx jq jc gron \
   fd ripgrep moreutils \
   neovim meld \
   docker docker-compose \
