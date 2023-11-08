@@ -41,6 +41,7 @@ stow waybar || exit 1
 stow ssh || exit 1
 stow git || exit 1
 stow npm || exit 1
+stow weechat || exit 1
 
 rm ../.nanorc
 stow nano || exit 1

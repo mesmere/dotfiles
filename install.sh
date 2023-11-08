@@ -18,7 +18,9 @@ pacman --needed --noconfirm -S \
   jq jc gron \
   fd ripgrep moreutils \
   neovim meld \
-  docker docker-compose
+  docker docker-compose \
+  ruby lua jdk-openjdk \
+  weechat discord
 
 echo 'Installing Chaotic AUR...'
 pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
