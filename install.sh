@@ -20,6 +20,7 @@ pacman --needed --noconfirm -S \
   neovim meld \
   docker docker-compose \
   ruby lua jdk-openjdk \
+  tmux \
   weechat discord
 
 echo 'Installing Chaotic AUR...'
