@@ -1,5 +1,5 @@
 [user]
-	name = Rileyann
+	name = mesmere
 	email = 95945959+mesmere@users.noreply.github.com
 	signingkey = /home/rileyann/.ssh/id_ed25519.pub
 [init]
@@ -20,6 +20,7 @@
 [mergetool]
 	prompt = false
 	guiDefault = false
+	keepBackup = false
 [mergetool "meld"]
 	hasOutput = true
 	useAutoMerge = true
