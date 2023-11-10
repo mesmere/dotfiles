@@ -1,4 +1,4 @@
 set title
 set whichwrap+=<,>,[,]
 set number
-set colorcolumn=+1
+autocmd FileType gitcommit set colorcolumn=+1
