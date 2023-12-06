@@ -61,6 +61,9 @@ sed -E 's/(.+?) (.+?) (.+?)/\3 \1 \2/' $HOME/.ssh/id_ed25519.pub > $HOME/.config
 echo 'Enabling docker...'
 sudo systemctl enable docker.socket
 
+echo 'Don\'t mount /tmp on tmpfs...'
+sudo systemctl mask tmp.mount
+
 echo 'Installing Doom Emacs...'
 pacman --noconfirm -S emacs-wayland editorconfig-core-c
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
