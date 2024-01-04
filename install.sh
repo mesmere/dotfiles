@@ -16,11 +16,11 @@ pacman --needed --noconfirm -S \
   stow \
   most bat eza \
   fx jq jc gron \
-  fd ripgrep moreutils \
+  fzf zoxide fd ripgrep moreutils \
   neovim meld \
   docker docker-compose \
   ruby lua jdk-openjdk \
-  tmux \
+  tmux yazi \
   weechat discord
 
 echo 'Installing Chaotic AUR...'
