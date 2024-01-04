@@ -3,3 +3,8 @@ ratio		= [1, 5, 2]
 sort_by		= "natural"
 sort_reverse	= false
 linemode	= "size"
+
+[plugins]
+preload = [
+	".config/yazi/status-name-function.lua"
+]
