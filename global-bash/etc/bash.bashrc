@@ -38,3 +38,6 @@ if [[ ${EUID} == 0 ]] ; then
 else
     PS1='\[\033[01;34m\]\w \$\[\033[00m\] '
 fi
+
+# Init zoxide
+eval "$(zoxide init bash)"
