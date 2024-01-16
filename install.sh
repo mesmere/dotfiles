@@ -79,6 +79,9 @@ echo 'Stowing configs...'
 echo 'If this fails, you can run ./stow.sh manually as many times as you need to fix the problem.'
 source ./stow.sh
 
+echo 'Setting yazi as the default file manager...'
+xdg-mime default yazi.desktop inode/directory
+
 echo 'Doom install/sync now that configs have been stowed...'
 $HOME/.config/emacs/bin/doom install
 $HOME/.config/emacs/bin/doom sync # maybe not necessary
