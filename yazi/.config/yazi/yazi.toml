@@ -6,5 +6,5 @@ linemode	= "size"
 
 [plugins]
 preload = [
-	".config/yazi/status-name-function.lua"
+	"/home/rileyann/.config/yazi/status-name-function.lua"
 ]
