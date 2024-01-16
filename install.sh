@@ -11,7 +11,7 @@ pacman -Syu
 
 echo 'Installing packages...'
 pacman --needed --noconfirm -S \
-  base-devel just \
+  base-devel just strace \
   bash-completion \
   stow \
   most bat eza \
