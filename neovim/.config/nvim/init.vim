@@ -7,3 +7,4 @@ inoremap <Up> <C-o>gk
 set number
 autocmd FileType gitcommit set colorcolumn=+1
 set clipboard+=unnamedplus
+set expandtab shiftwidth=2 tabstop=2 cino=+4
