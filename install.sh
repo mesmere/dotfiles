@@ -50,6 +50,8 @@ cat <<- EOF > default-packages
 	nodemon
 EOF
 cd $cwd
+nodenv install 20.7.0
+nodenv global 20
 
 echo 'Setting up ssh...'
 systemctl --user --now enabled ssh-agent
@@ -72,7 +74,6 @@ echo -e '\n*************************************************'
 echo 'Doom Emacs was installed but you need to run these to fix broken powerline icons. (The AUR artifacts are too old to be cached by chaotic.)'
 echo '  M-x nerd-icons-install-fonts'
 echo '  M-x all-the-icons-install-fonts'
-echo 'Additionally, the javascript module requires node/npm so make sure you use nodenv install and nodenv global to set up a global node install.'
 echo -e '*************************************************\n'
 
 echo 'Stowing configs...'
