@@ -66,26 +66,12 @@ sudo systemctl enable docker.socket
 echo 'Don\'t mount /tmp on tmpfs...'
 sudo systemctl mask tmp.mount
 
-echo 'Installing Doom Emacs...'
-pacman --noconfirm -S emacs-wayland editorconfig-core-c
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-$HOME/.config/emacs/bin/doom install
-echo -e '\n*************************************************'
-echo 'Doom Emacs was installed but you need to run these to fix broken powerline icons. (The AUR artifacts are too old to be cached by chaotic.)'
-echo '  M-x nerd-icons-install-fonts'
-echo '  M-x all-the-icons-install-fonts'
-echo -e '*************************************************\n'
-
 echo 'Stowing configs...'
 echo 'If this fails, you can run ./stow.sh manually as many times as you need to fix the problem.'
 source ./stow.sh
 
 echo 'Setting yazi as the default file manager...'
 xdg-mime default yazi.desktop inode/directory
-
-echo 'Doom install/sync now that configs have been stowed...'
-$HOME/.config/emacs/bin/doom install
-$HOME/.config/emacs/bin/doom sync # maybe not necessary
 
 echo 'Done.'
 echo 'Do a full restart now before launching anything.'
