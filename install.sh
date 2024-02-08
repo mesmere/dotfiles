@@ -17,7 +17,7 @@ pacman --needed --noconfirm -S \
   most bat eza \
   fx jq jc gron \
   fzf zoxide fd ripgrep moreutils \
-  neovim meld \
+  neovim meld tree-sitter-cli \
   docker docker-compose \
   ruby lua jdk-openjdk \
   tmux yazi \
