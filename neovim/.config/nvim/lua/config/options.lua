@@ -4,3 +4,4 @@
 vim.opt.title = true
 vim.opt.whichwrap:append("<,>,[,]")
 vim.opt.cino = "+4"
+vim.opt.relativenumber = false
