@@ -8,4 +8,10 @@ return {{
       end
     end
   end,
+  config = function(_, opts)
+    local cmp = require("cmp")
+    opts.mapping["<Tab>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })
+    opts.mapping["<CR>"] = cmp.config.disable
+    cmp.setup(opts)
+  end,
 }}
