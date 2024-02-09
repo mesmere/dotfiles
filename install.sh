@@ -21,7 +21,8 @@ pacman --needed --noconfirm -S \
   docker docker-compose \
   ruby lua jdk-openjdk \
   tmux yazi \
-  weechat discord
+  weechat discord \
+  mpv
 
 echo 'Installing Chaotic AUR...'
 pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com

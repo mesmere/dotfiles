@@ -35,7 +35,6 @@ stow sway || exit 1
 rm ../.config/nvim/init.lua # prefer vimscript...
 stow neovim || exit 1
 
-stow doom || exit 1
 stow foot || exit 1
 stow waybar || exit 1
 stow mako || exit 1
@@ -44,6 +43,7 @@ stow git || exit 1
 stow npm || exit 1
 stow weechat || exit 1
 stow yazi || exit 1
+stow mpv || exit 1
 
 rm ../.nanorc
 stow nano || exit 1
