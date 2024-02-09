@@ -32,7 +32,7 @@ stow bash || exit 1
 stomp ../.config/sway
 stow sway || exit 1
 
-rm ../.config/nvim/init.lua # prefer vimscript...
+stomp ../.config/nvim
 stow neovim || exit 1
 
 stow foot || exit 1
