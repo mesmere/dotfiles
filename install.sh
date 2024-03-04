@@ -51,8 +51,8 @@ cat <<- EOF > default-packages
 	nodemon
 EOF
 cd $cwd
-nodenv install 20.7.0
-nodenv global 20
+nodenv install 21.6.2
+nodenv global 21
 
 echo 'Setting up ssh...'
 systemctl --user --now enabled ssh-agent
