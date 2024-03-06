@@ -22,7 +22,8 @@ pacman --needed --noconfirm -S \
   ruby lua jdk-openjdk \
   tmux yazi \
   weechat discord \
-  mpv
+  mpv \
+  rofi-emoji wtype \
 
 echo 'Installing Chaotic AUR...'
 pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com

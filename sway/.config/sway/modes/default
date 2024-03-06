@@ -55,6 +55,9 @@ $bindsym XF86PowerOff exec $shutdown
 
 $bindsym XF86TouchpadToggle input type:touchpad events toggle enabled disabled
 
+## Action // Emoji picker ##
+$bindsym $mod+e exec rofi -modi emoji -show emoji -emoji-mode copy
+
 # Moving around:
 #
 # Move your focus around
@@ -148,13 +151,6 @@ $bindsym $mod+Shift+space exec /usr/share/sway/scripts/first-empty-workspace.py 
 $bindsym $mod+b splith
 ## Setting // Split windows vertically ##
 $bindsym $mod+v splitv
-
-## Action // Switch to window stacking ##
-$bindsym $mod+s layout stacking
-## Action // Switch to window tabbing ##
-$bindsym $mod+w layout tabbed
-## Action // Toggle window splitting ##
-$bindsym $mod+e layout toggle split
 
 ## Action // Toggle fullscreen ##
 $bindsym $mod+f fullscreen
