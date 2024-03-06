@@ -41,7 +41,7 @@
         // media
         "custom/playerctl",
 //        "idle_inhibitor",
-        "custom/dnd",
+//        "custom/dnd",
         "pulseaudio",
         "backlight",
 
