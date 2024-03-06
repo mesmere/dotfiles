@@ -27,6 +27,7 @@ echo "Stowing user configs."
 ###
 
 archive ../.bashrc
+archive ../.bash_profile
 stow bash || exit 1
 
 stomp ../.config/sway
