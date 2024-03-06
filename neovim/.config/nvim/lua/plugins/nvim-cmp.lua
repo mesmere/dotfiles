@@ -13,5 +13,13 @@ return {{
     opts.mapping["<Tab>"] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true })
     opts.mapping["<CR>"] = cmp.config.disable
     cmp.setup(opts)
+
+    local js_config = {
+      sources = cmp.config.sources({
+        { name = 'nvim_lsp' },
+      })
+    }
+    cmp.setup.filetype('javascript', js_config)
+    cmp.setup.filetype('typescript', js_config)
   end,
 }}

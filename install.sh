@@ -50,6 +50,7 @@ git clone https://github.com/nodenv/nodenv-aliases.git plugins/nodenv-aliases
 git clone https://github.com/nodenv/nodenv-default-packages.git plugins/nodenv-default-packages
 cat <<- EOF > default-packages
 	nodemon
+	typescript
 EOF
 cd $cwd
 nodenv install 21.6.2
