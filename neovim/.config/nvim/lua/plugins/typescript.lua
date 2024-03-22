@@ -1,3 +1,6 @@
+-- This is basically https://www.lazyvim.org/extras/lang/typescript
+-- except that we use typescript-tools.nvim so that we use a project-specific tsserver version 
+-- instead of whatever mason installs, and bc I think typescript-tools's approach is better anyway
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -12,6 +15,11 @@ return {
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {
       separate_diagnostic_server = false,
+      expose_as_code_action = "all",
+      tsserver_file_preferences = {
+      	includeInlayFunctionLikeReturnTypeHints = true,
+      	includeInlayVariableTypeHints = true,
+      },
     },
   },
   {
