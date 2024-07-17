@@ -1,6 +1,6 @@
 function Status:name()
 	local h = cx.active.current.hovered
-	if h == nil then
+	if not h then
 		return ui.Span("")
 	end
 

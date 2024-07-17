@@ -14,7 +14,7 @@ pacman --needed --noconfirm -S \
   base-devel just strace \
   bash-completion \
   stow \
-  most bat eza \
+  most bat eza ouch \
   fx jq jc gron \
   fzf zoxide fd ripgrep moreutils \
   neovim meld tree-sitter-cli lazygit \
