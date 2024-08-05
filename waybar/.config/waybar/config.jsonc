@@ -85,7 +85,7 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "swaymsg exec \\$once \\$term_float htop",
+        "on-click": "swaymsg exec \\$once -- \\$term_float htop -s PERCENT_CPU",
         "tooltip": true
     },
 
@@ -96,7 +96,7 @@
             "warning": 70,
             "critical": 90
         },
-        "on-click": "swaymsg exec \\$once \\$term_float htop",
+        "on-click": "swaymsg exec \\$once -- \\$term_float htop -s PERCENT_MEM",
         "tooltip": true
     },
 
