@@ -17,7 +17,7 @@ pacman --needed --noconfirm -S \
   most bat eza ouch \
   fx jq jc gron \
   fzf zoxide fd ripgrep moreutils \
-  neovim meld tree-sitter-cli lazygit \
+  neovim helix meld tree-sitter-cli lazygit \
   docker docker-compose \
   ruby lua jdk-openjdk \
   tmux yazi \
@@ -68,6 +68,12 @@ sudo systemctl enable docker.socket
 
 echo 'Don\'t mount /tmp on tmpfs...'
 sudo systemctl mask tmp.mount
+
+echo 'Switch sorting locale to C...'
+cat <<- EOF >> /etc/locale.conf
+	LC_CTYPE=C.utf8
+	LC_COLLATE=C.utf8
+EOF
 
 echo 'Stowing configs...'
 echo 'If this fails, you can run ./stow.sh manually as many times as you need to fix the problem.'
