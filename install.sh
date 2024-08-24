@@ -82,5 +82,8 @@ source ./stow.sh
 echo 'Setting yazi as the default file manager...'
 xdg-mime default yazi.desktop inode/directory
 
+echo 'Building deadbeef-mpris2-plugin-git...'
+yay -S deadbeef-mpris2-plugin-git
+
 echo 'Done.'
 echo 'Do a full restart now before launching anything.'
