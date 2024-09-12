@@ -57,6 +57,10 @@ cd $cwd
 nodenv install 22.8.0
 nodenv global 22
 
+echo 'Installing userspace OOM killer...'
+sudo pacman -S earlyoom systembus-notify
+sudo systemctl enable --now earlyoom
+
 echo 'Setting up ssh...'
 systemctl --user --now enabled ssh-agent
 ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519 -C 95945959+mesmere@users.noreply.github.com
