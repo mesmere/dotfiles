@@ -16,7 +16,7 @@ pacman --needed --noconfirm -S \
   stow \
   most bat eza ouch git-delta \
   fx jq jc gron \
-  fzf zoxide fd ripgrep moreutils sad \
+  fzf zoxide fd ripgrep moreutils sad sd \
   neovim helix meld tree-sitter-cli lazygit \
   docker docker-compose \
   ruby lua jdk-openjdk \
