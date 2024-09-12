@@ -45,6 +45,7 @@ src/configure
 make -C src
 mkdir plugins
 git clone https://github.com/nodenv/node-build.git plugins/node-build
+git clone https://github.com/nodenv/node-build-update-defs.git plugins/node-build-update-defs
 git clone https://github.com/nodenv/nodenv-update.git plugins/nodenv-update
 git clone https://github.com/nodenv/nodenv-aliases.git plugins/nodenv-aliases
 git clone https://github.com/nodenv/nodenv-default-packages.git plugins/nodenv-default-packages
@@ -53,8 +54,8 @@ cat <<- EOF > default-packages
 	typescript
 EOF
 cd $cwd
-nodenv install 21.6.2
-nodenv global 21
+nodenv install 22.8.0
+nodenv global 22
 
 echo 'Setting up ssh...'
 systemctl --user --now enabled ssh-agent
