@@ -2,6 +2,13 @@
 	name = mesmere
 	email = 95945959+mesmere@users.noreply.github.com
 	signingkey = /home/rileyann/.ssh/id_ed25519.pub
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
 [init]
         defaultBranch = main
 [pull]
@@ -11,12 +18,14 @@
 [diff]
 	tool = nvimdiff
 	guitool = meld
+	colorMoved = default
 [difftool]
 	prompt = false
 	guiDefault = false
 [merge]
 	tool = nvimdiff3
 	guitool = meld
+	conflictstyle = diff3
 [mergetool]
 	prompt = false
 	guiDefault = false
