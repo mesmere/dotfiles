@@ -20,7 +20,7 @@ pacman --needed --noconfirm -S \
   helix meld tree-sitter-cli lazygit \
   docker docker-compose \
   ruby lua jdk-openjdk \
-  tmux yazi \
+  tmux \
   weechat discord \
   mpv \
   rofi-emoji wtype \

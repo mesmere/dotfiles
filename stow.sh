@@ -41,7 +41,6 @@ stow git || exit 1
 stow npm || exit 1
 stow weechat || exit 1
 stow discord || exit 1
-stow yazi || exit 1
 stow mpv || exit 1
 
 rm ../.nanorc

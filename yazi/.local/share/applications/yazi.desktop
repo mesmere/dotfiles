@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=File Manager Yazi
-Comment=TUI file manager
-Exec=foot yazi %f
-MimeType=inode/directory;
