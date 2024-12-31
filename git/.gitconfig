@@ -16,14 +16,14 @@
 [rebase]
         autoStash = true
 [diff]
-	tool = nvimdiff
+	#tool = nvimdiff
 	guitool = meld
 	colorMoved = default
 [difftool]
 	prompt = false
 	guiDefault = false
 [merge]
-	tool = nvimdiff3
+	#tool = nvimdiff3
 	guitool = meld
 	conflictstyle = diff3
 [mergetool]

@@ -33,9 +33,6 @@ stow bash || exit 1
 stomp ../.config/sway
 stow sway || exit 1
 
-stomp ../.config/nvim
-stow neovim || exit 1
-
 stow foot || exit 1
 stow waybar || exit 1
 stow mako || exit 1
