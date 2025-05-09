@@ -1,0 +1,4 @@
+inherits = "sonokai"
+
+[palette]
+"bg0" = "#000000"

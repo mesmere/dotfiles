@@ -1,0 +1,5 @@
+[language-server.typescript-language-server.config.typescript.inlayHints]
+includeInlayFunctionLikeReturnTypeHints = false
+includeInlayFunctionParameterTypeHints = false
+includeInlayPropertyDeclarationTypeHints = false
+includeInlayVariableTypeHints = false

@@ -1,0 +1,19 @@
+theme = "eiffel"
+#theme = "sonokai_black"
+
+[editor]
+bufferline = "always"
+color-modes = true
+end-of-line-diagnostics = "hint"
+file-picker.hidden = false
+gutters = ["line-numbers", "spacer", "diff"]
+inline-diagnostics.cursor-line = "warning"
+inline-diagnostics.max-wrap = 25
+line-number = "relative"
+preview-completion-insert = false
+soft-wrap.enable = true
+soft-wrap.max-wrap = 25
+
+[editor.lsp]
+display-inlay-hints = true
+snippets = false
